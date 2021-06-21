@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WebRTC Videollamada</title>
+  </head>
+  <body>
+    <h2>1. Iniciar tu Webcam</h2>
+    <div class="videos">
+      <span>
+        <h3>Doctor</h3>
+        <video id="webcamVideo" #webcamVideo  autoplay playsinline></video>
+      </span>
+      <span>
+        <h3>Paciente</h3>
+        <video id="remoteVideo" #remoteVideo autoplay playsinline></video>
+      </span>
+
+
+    </div>
+
+    <button id="webcamButton" #webcamButton (click)='iniciarCamara()'>Iniciar webcam</button>
+    <h2>2. Crear nueva llamada</h2>
+    <button id="callButton" #callButton  (click)='llamar()' disabled>Crear llamada (oferta)</button>
+
+    <h2>3. Unirse a la llamada</h2>
+    <p>Ingresar ID de la llamada</p>
+    
+    <input id="callInput" #callInput  />
+    <button id="answerButton" #answerButton (click)="contestar()" disabled>Contestar</button>
+
+    <h2>4. Colgar</h2>
+
+    <button id="hangupButton" #hangupButton  disabled>Hangup</button>
+
+  </body>
+</html>
